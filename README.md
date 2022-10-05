@@ -17,7 +17,22 @@ Gradient descent is best used when the parameters cannot be calculated analytica
 #### 3) Explain over- and under-fitting and how to combat them? [[src](http://houseofbots.com/news-detail/2849-4-data-science-and-machine-learning-interview-questions)]
 [[Answer]](https://towardsdatascience.com/overfitting-vs-underfitting-a-complete-example-d05dd7e19765)
 
+An extension of linear regression is polynomial regression to learn the relationship between x and y. Polynomial regression's inputs are raised to different powers.
+
+The polynomial degree represents how much flexibility is in the model, with a higher power allowing the model freedom to hit as many data points as possible. An underfit model has low variance and high bias. Variance refers to how much the model is dependent on the training data. For the case of a 1 degree polynomial, the model depends very little on the training data because it barely pays any attention to the points! 
+When the model makes test predictions, the bias leads it to make inaccurate estimates. The model failed to learn the relationship between x and y because of this bias, a clear example of underfitting.
+
+With a high degree of flexibility, the model does its best to account for every single training point. While this would be acceptable if the training observations perfectly represented the true function, because there is noise in the data, our model ends up fitting the noise. This is a model with a high variance, because it will change significantly depending on the training data. 
+
+Techniques for developing the optimal model: Cross-Validation, Early Stopping, Pruning, Regularization, Remove features, Train with more data, Ensembling. 
+
+Bagging then combines all the strong learners together in order to “smooth out” their predictions.
+
+Boosting then combines all the weak learners into a single strong learner.
+
 #### 4) How do you combat the curse of dimensionality? [[src](http://houseofbots.com/news-detail/2849-4-data-science-and-machine-learning-interview-questions)]
+
+Curse of Dimensionality describes the explosive nature of increasing data dimensions and its resulting exponential increase in computational efforts required for its processing and/or analysis.
 
  - Manual Feature Selection
  - Principal Component Analysis (PCA)
